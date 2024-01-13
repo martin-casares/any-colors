@@ -4,3 +4,14 @@
 	padding: 5rem;
 	text-align: center;
 }
+.layout {
+	width: 100%;
+	display: flex;
+	margin-left: 20%;
+	align-items: center;
+	gap: 16px;
+}
+
+.grow1 {
+	flex-grow: 1;
+}
