@@ -41,8 +41,10 @@ export const ImageColors = ({ setMainColor }) => {
 	};
 	return (
 		<div className="image-colors-container">
-			<div className="imgUpload">
-				<img src={imageSrc} alt="Imagen Cargada" style={{ width: '50%' }} />
+			<div className="image-upload">
+				<div>
+					<img src={imageSrc} alt="Imagen Cargada" style={{ width: '50%' }} />
+				</div>
 				<input type="file" accept="image/*" onChange={handleImageUpload} />
 
 				{imageSrc && (
@@ -50,9 +52,21 @@ export const ImageColors = ({ setMainColor }) => {
 						{({ data, loading }) => {
 							if (loading) return <Loading />;
 							return (
-								<div>
-									Predominant color: <strong>{data}</strong>
-								</div>
+								<>
+									<div
+										className="predominant-color"
+										style={{
+											backgroundColor: data,
+											width: '50%',
+											height: '50px',
+										}}
+									>
+										<p className="predominant-code">
+											Predominant color:
+											<strong>{data}</strong>
+										</p>
+									</div>
+								</>
 							);
 						}}
 					</ColorThief>
