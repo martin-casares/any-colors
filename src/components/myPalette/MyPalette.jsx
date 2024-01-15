@@ -6,7 +6,7 @@ import React from 'react';
 
 export const MyPalette = ({ colors }) => {
 	return (
-		<div className="container">
+		<div className="palette-container">
 			<ul className="palette-wrapper">
 				{colors.map((color, index) => (
 					<li key={index}>

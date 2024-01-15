@@ -7,9 +7,9 @@
 .layout {
 	width: 100%;
 	display: flex;
-	margin-left: 20%;
+	/* margin-left: 20%; */
 	align-items: center;
-	gap: 16px;
+	gap: 164px;
 }
 
 .grow1 {
