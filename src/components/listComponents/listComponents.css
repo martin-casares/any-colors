@@ -1,0 +1,13 @@
+.mini-layout {
+	margin-top: 4rem;
+	width: 1325px;
+	height: 100%;
+
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	gap: 8px;
+}
+
+.mini-box {
+}

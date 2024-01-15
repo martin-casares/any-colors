@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { SketchPicker } from 'react-color';
 import tinycolor from 'tinycolor2';
+import './myPiker.css';
+import { MyPalette } from '../myPalette/MyPalette';
 
-export const MyPiker = ({ mainColor, setMainColor, setColors }) => {
+export const MyPiker = ({ mainColor, setMainColor, colors, setColors }) => {
 	const generateColors = (mainColor) => {
 		const mainTinyColor = tinycolor(mainColor);
 
@@ -24,15 +26,20 @@ export const MyPiker = ({ mainColor, setMainColor, setColors }) => {
 
 	useEffect(() => {
 		generateColors(mainColor);
-	}, [setMainColor]);
-
+	}, [setMainColor, setColors]);
+	console.log(setColors.mainColor);
 	const handleColorChange = (color) => {
 		setMainColor(color.hex);
 		generateColors(color.hex);
 	};
 	return (
-		<div>
-			<SketchPicker color={mainColor} onChangeComplete={handleColorChange} />
+		<div className="piker-container">
+			<div className="piker">
+				<SketchPicker color={mainColor} onChangeComplete={handleColorChange} />
+			</div>
+			<div className="palette">
+				<MyPalette colors={colors} />
+			</div>
 		</div>
 	);
 };

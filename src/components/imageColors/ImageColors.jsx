@@ -6,7 +6,7 @@ import { MyPalette } from '../myPalette/MyPalette';
 
 const Loading = () => <div>Loading...</div>;
 
-export const ImageColors = ({ setMainColor }) => {
+export const ImageColors = () => {
 	const [imageSrc, setImageSrc] = useState(
 		'https://live.staticflickr.com/65535/50237066832_72c7290c5c_c.jpg'
 	);
@@ -76,11 +76,7 @@ export const ImageColors = ({ setMainColor }) => {
 				<Palette src={imageSrc} crossOrigin="anonymous" format="hex" colorCount={6}>
 					{({ data, loading }) => {
 						if (loading) return <Loading />;
-						return (
-							<div>
-								<MyPalette colors={data} />
-							</div>
-						);
+						return <MyPalette colors={data} />;
 					}}
 				</Palette>
 			</div>
