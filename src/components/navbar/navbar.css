@@ -1,0 +1,29 @@
+.nav-wrapper {
+	background-color: var(--light);
+}
+.nav-content {
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.logo {
+	width: 48px;
+	margin-left: 1rem;
+}
+
+.nav-content ul {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	list-style: none;
+}
+.nav-content li {
+	margin: 0 1.1rem;
+}
+.menu-item {
+	color: var(--dark);
+	/* 	position: relative; */
+	cursor: pointer;
+}

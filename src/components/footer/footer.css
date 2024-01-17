@@ -1,0 +1,5 @@
+.footer p {
+	color: var(--orange);
+	font-size: 1rem;
+	font-weight: bold;
+}

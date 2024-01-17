@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './App.css';
+
 import { MyPiker } from './components/myPiker/MyPiker';
 import { ListComponents } from './components/listComponents/ListComponents';
-
 import { ImageColors } from './components/imageColors/ImageColors';
+import { Navbar } from './components/navbar/Navbar';
+import { Footer } from './components/footer/Footer';
 
 function App() {
 	const [mainColor, setMainColor] = useState('#535392');
@@ -11,6 +13,7 @@ function App() {
 
 	return (
 		<>
+			<Navbar />
 			<div className="app-container">
 				<h1 className="app-title"> Any color your like</h1>
 				<section className="app-piker-palette">
@@ -34,6 +37,7 @@ function App() {
 					</div>
 				</section>
 			</div>
+			<Footer />
 		</>
 	);
 }
