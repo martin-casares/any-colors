@@ -5,8 +5,8 @@ import { FaTwitter } from 'react-icons/fa6';
 
 export const MiniNav = ({ colors }) => {
 	return (
-		<div className="mini-nav">
-			<div className="nav-wrapper">
+		<div className="mini-nav ">
+			<div className="nav-wrapper" style={{ background: colors[5] }}>
 				<div className="nav-content">
 					<strong className="logo" style={{ color: colors[3] }}>
 						Logo
