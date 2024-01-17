@@ -1,17 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;400;500;600;700&display=swap');
+
 #root {
-	max-width: 1280px;
+	max-width: 1350px;
 	margin: 0 auto;
-	padding: 5rem;
+	padding: 1rem;
 	text-align: center;
 }
-.layout {
-	width: 100%;
-	display: flex;
-	/* margin-left: 20%; */
-	align-items: center;
-	gap: 164px;
+
+.app-container .app-title {
+	font-size: 3rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	color: var(--dark);
+}
+.app-piker-palette {
+	border: 2px dashed var(--red);
+	margin: 0 auto;
 }
 
-.grow1 {
-	flex-grow: 1;
+/* section app-image-upload */
+.app-image-upload {
+	border: 2px dashed var(--red);
+	margin-top: 1rem;
 }

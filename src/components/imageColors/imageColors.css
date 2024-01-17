@@ -4,8 +4,12 @@
 	display: flex;
 	align-items: center;
 }
+.image-upload {
+	width: 40%;
+}
 
 .predominant-color {
+	width: 50%;
 	margin: 30px auto;
 	border-radius: 5px;
 }
@@ -14,4 +18,40 @@
 	display: flex;
 	flex-direction: column;
 	padding-top: 8px;
+	box-shadow: 2px 2px 0.3em var(--blue-light);
+	border-radius: 0.3rem;
+	cursor: pointer;
+	padding: 0.2rem 1rem 0.2rem 1rem;
+}
+
+.image-colors-container .palette {
+	width: 40%;
+	margin-bottom: 4rem;
+}
+.image-colors-container .palette hr {
+	width: 95%;
+	height: 0;
+	margin-top: 1rem;
+	border: medium none;
+	border-top: 1px dashed var(--red);
+}
+
+.btn-try {
+	margin-top: 1rem;
+	color: var(--grey);
+	font-size: 1rem;
+	font-weight: bold;
+	width: 90%;
+	padding: 0.5rem;
+	background-color: var(--red);
+	border-radius: 5px;
+}
+
+.image-colors-container .code {
+	width: 30%;
+	margin-bottom: 4rem;
+}
+
+.image-colors-container .code p {
+	color: white;
 }

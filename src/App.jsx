@@ -6,33 +6,34 @@ import { ListComponents } from './components/listComponents/ListComponents';
 import { ImageColors } from './components/imageColors/ImageColors';
 
 function App() {
-	const [mainColor, setMainColor] = useState('#16537b');
+	const [mainColor, setMainColor] = useState('#535392');
 	const [colors, setColors] = useState([]);
 
 	return (
 		<>
-			<div>
-				<h1> Any colour you like</h1>
-			</div>
-			<section className="layout">
-				<div className="grow1">
+			<div className="app-container">
+				<h1 className="app-title"> Any color your like</h1>
+				<section className="app-piker-palette">
 					<MyPiker
 						setMainColor={setMainColor}
 						mainColor={mainColor}
 						colors={colors}
 						setColors={setColors}
 					/>
-				</div>
-				<div className="grow1">
-					<ImageColors setMainColor={setMainColor} />
-				</div>
-			</section>
+				</section>
 
-			<section className="layout">
-				<div className="grow1">
-					<ListComponents colors={colors} />
-				</div>
-			</section>
+				<section className="app-image-upload">
+					<div className="app-image-upload-container">
+						<ImageColors setMainColor={setMainColor} />
+					</div>
+				</section>
+
+				<section className="app-components">
+					<div className="app-components-content">
+						<ListComponents colors={colors} />
+					</div>
+				</section>
+			</div>
 		</>
 	);
 }
