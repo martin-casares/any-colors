@@ -4,7 +4,10 @@ import { MiniForm } from './miniForm/MiniForm';
 import { ListUsers } from './listUsers/ListUsers';
 import { MiniNav } from './miniNav/MiniNav';
 
-export const ListComponents = ({ colors }) => {
+import { useColorContext } from '../../ColorContext';
+
+export const ListComponents = () => {
+	const { colors } = useColorContext();
 	const components = [MiniNav, ListUsers, MiniForm];
 	return (
 		<div>

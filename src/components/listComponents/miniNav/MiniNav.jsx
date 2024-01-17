@@ -33,8 +33,10 @@ export const MiniNav = ({ colors }) => {
 			<div className="hero">
 				<p className="hero-title" style={{ color: colors[4] }}>
 					Hello I'm
-					<p style={{ color: colors[5] }}>frontend developer...</p>
 				</p>
+				<span style={{ color: colors[5], fontSize: '1.5rem' }}>
+					frontend developer...
+				</span>
 				<button
 					className="hero-button"
 					style={{
