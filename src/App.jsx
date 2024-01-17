@@ -20,10 +20,12 @@ function App() {
 						colors={colors}
 						setColors={setColors}
 					/>
+				</section>
 
-					{/* <div className="grow1">
-					<ImageColors setMainColor={setMainColor} />
-				</div> */}
+				<section className="app-image-upload">
+					<div className="app-image-upload-container">
+						<ImageColors setMainColor={setMainColor} />
+					</div>
 				</section>
 
 				<section className="app-components">

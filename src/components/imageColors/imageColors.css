@@ -4,8 +4,12 @@
 	display: flex;
 	align-items: center;
 }
+.image-upload {
+	width: 40%;
+}
 
 .predominant-color {
+	width: 50%;
 	margin: 30px auto;
 	border-radius: 5px;
 }
@@ -14,4 +18,18 @@
 	display: flex;
 	flex-direction: column;
 	padding-top: 8px;
+}
+
+.image-colors-container .palette {
+	width: 40%;
+	margin-bottom: 4rem;
+}
+
+.image-colors-container .code {
+	width: 30%;
+	margin-bottom: 4rem;
+}
+
+.image-colors-container .code p {
+	color: white;
 }

@@ -10,14 +10,13 @@ export const MyPalette = ({ colors }) => {
 		<div className="palette-container">
 			<div className="accordion">
 				{colors.map((color, index) => (
-					<CopyToClipboard text={color}>
+					<CopyToClipboard text={color} key={index}>
 						<div
-							key={index}
 							className="accordion-item hide"
 							style={{
 								backgroundColor: color,
-								/*	width: '100%',*/
-								/* height: '35px', */
+								width: '100%',
+								height: '35px',
 							}}
 						>
 							<div className="color-code-content">

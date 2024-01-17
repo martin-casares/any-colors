@@ -27,7 +27,7 @@ export const MyPiker = ({ mainColor, setMainColor, colors, setColors }) => {
 
 	useEffect(() => {
 		generateColors(mainColor);
-	}, [mainColor, colors]);
+	}, [setMainColor, setColors]);
 
 	const handleColorChange = (color) => {
 		setMainColor(color.hex);

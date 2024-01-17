@@ -17,3 +17,9 @@
 	border: 2px dashed var(--red);
 	margin: 0 auto;
 }
+
+/* section app-image-upload */
+.app-image-upload {
+	border: 2px dashed var(--red);
+	margin-top: 1rem;
+}

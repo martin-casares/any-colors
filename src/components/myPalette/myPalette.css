@@ -1,16 +1,15 @@
 .palette-container {
 	width: 100%;
 	display: flex;
-	/*background-color: var(--blue-light);*/
 	height: 50vh;
 }
 
 /* acordion */
 .accordion {
 	width: 60%;
-	height: 80%;
+	height: 100%;
 	margin: auto;
-	padding: 2em;
+	padding: 1em;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -18,8 +17,8 @@
 
 .accordion-item {
 	flex-basis: 10%;
-	/* height: 50%; */
-	margin-bottom: 0.6em;
+	height: 80%;
+	margin-bottom: 0.5rem;
 	border-radius: 5px;
 	display: flex;
 	justify-content: center;
@@ -29,27 +28,27 @@
 	cursor: pointer;
 	box-shadow: 2px 2px 0.3em var(--blue-light);
 	transition: flex-grow 0.3s linear, background-color 0.2s ease-in;
+	/* 	position: relative; */
 }
 
 .accordion-item:hover {
 	background-color: #cde9f7;
-	flex-grow: 1;
-	color: white;
+	flex-grow: 2;
+	/* color: white; */
 }
 
 .accordion-item:active {
 	box-shadow: 1px 1px 0.1em #67adb5;
 	background-color: #bde6fc;
-	color: white;
+	/* 	color: white; */
 }
 /* end acordion */
 
 .color-code-content {
 	display: flex;
 	flex-direction: column;
-
 	cursor: pointer;
-	position: absolute;
+	/* 	position: absolute; */
 }
 
 .color-code-content .icon {
@@ -65,12 +64,7 @@
 }
 
 .hide {
-	/* 	display: flex; */
 	color: transparent;
-	/* 	justify-content: center;
-	align-items: center;
-	text-align: center;
-	padding-top: 10px; */
 }
 .hide:hover {
 	color: white;
