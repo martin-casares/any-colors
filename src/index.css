@@ -1,0 +1,12 @@
+:root {
+	--light: #ecebdf;
+	--dark: #333;
+	--red: #bc3b38;
+	--grey: #bdbdbd;
+	--blue-light: #125b8b;
+	--orange: #d36a09;
+}
+html {
+	background-color: var(--light);
+	color: var(--dark);
+}

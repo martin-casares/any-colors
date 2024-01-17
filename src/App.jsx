@@ -11,28 +11,27 @@ function App() {
 
 	return (
 		<>
-			<div>
-				<h1> Any colour you like</h1>
-			</div>
-			<section className="layout">
-				<div className="grow1">
+			<div className="app-container">
+				<h1 className="app-title"> Any color your like</h1>
+				<section className="app-piker-palette">
 					<MyPiker
 						setMainColor={setMainColor}
 						mainColor={mainColor}
 						colors={colors}
 						setColors={setColors}
 					/>
-				</div>
-				<div className="grow1">
-					<ImageColors setMainColor={setMainColor} />
-				</div>
-			</section>
 
-			<section className="layout">
-				<div className="grow1">
-					<ListComponents colors={colors} />
-				</div>
-			</section>
+					{/* <div className="grow1">
+					<ImageColors setMainColor={setMainColor} />
+				</div> */}
+				</section>
+
+				<section className="app-components">
+					<div className="app-components-content">
+						<ListComponents colors={colors} />
+					</div>
+				</section>
+			</div>
 		</>
 	);
 }
