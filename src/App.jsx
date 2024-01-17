@@ -6,7 +6,7 @@ import { ListComponents } from './components/listComponents/ListComponents';
 import { ImageColors } from './components/imageColors/ImageColors';
 
 function App() {
-	const [mainColor, setMainColor] = useState('#16537b');
+	const [mainColor, setMainColor] = useState('#535392');
 	const [colors, setColors] = useState([]);
 
 	return (

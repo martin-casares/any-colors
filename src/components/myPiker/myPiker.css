@@ -12,13 +12,13 @@
 .piker-container input {
 	width: 90%;
 	margin-top: 0.5rem;
-	padding: 1.5rem;
+	padding: 1.1rem;
 	font-size: 0.9rem;
 	background-color: var(--light);
 	border: 1px solid var(--grey);
 	border-radius: 0.5rem;
 	color: var(--black);
-	font-size: 1rem;
+	font-size: 2rem;
 	font-weight: bold;
 	outline: none;
 }
@@ -43,12 +43,22 @@
 	border-radius: 5px;
 	margin-right: 2rem;
 }
-.code h1 {
-	margin-top: 0.5rem;
-}
 .code h1,
 p {
 	color: var(--light);
+}
+.code h1 {
+	margin-top: 0.5rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	text-align: left;
+	border-top: 1px solid var(--orange);
+	border-right: 1px solid var(--grey);
+	width: 50%;
+}
+.code p {
+	text-align: left;
+	margin-left: 1rem;
 }
 .code span {
 	color: var(--red);

@@ -3,6 +3,7 @@ import { SketchPicker } from 'react-color';
 import tinycolor from 'tinycolor2';
 import './myPiker.css';
 import { MyPalette } from '../myPalette/MyPalette';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 export const MyPiker = ({ mainColor, setMainColor, colors, setColors }) => {
 	const generateColors = (mainColor) => {
@@ -26,7 +27,7 @@ export const MyPiker = ({ mainColor, setMainColor, colors, setColors }) => {
 
 	useEffect(() => {
 		generateColors(mainColor);
-	}, [setMainColor, setColors]);
+	}, [mainColor, colors]);
 
 	const handleColorChange = (color) => {
 		setMainColor(color.hex);
@@ -35,7 +36,11 @@ export const MyPiker = ({ mainColor, setMainColor, colors, setColors }) => {
 	return (
 		<div className="piker-container">
 			<div className="input-color-code">
-				<input type="text" placeholder="Any Color Code your like" />
+				<input
+					type="text"
+					placeholder="Color Code"
+					onChange={(e) => setMainColor(e.target.value)}
+				/>
 			</div>
 			<div className="piker-content">
 				<div className="piker">
@@ -44,9 +49,10 @@ export const MyPiker = ({ mainColor, setMainColor, colors, setColors }) => {
 				<div className="palette">
 					<MyPalette colors={colors} />
 				</div>
+
 				<div className="code">
+					<h1>style.css</h1>
 					<div>
-						<h1>code</h1>
 						<p>:root </p>
 						{colors.map((color, index) => (
 							<p key={index}>

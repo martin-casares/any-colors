@@ -12,11 +12,12 @@ export const MyPalette = ({ colors }) => {
 				{colors.map((color, index) => (
 					<CopyToClipboard text={color}>
 						<div
+							key={index}
 							className="accordion-item hide"
 							style={{
 								backgroundColor: color,
 								/*	width: '100%',*/
-								height: '35px',
+								/* height: '35px', */
 							}}
 						>
 							<div className="color-code-content">
