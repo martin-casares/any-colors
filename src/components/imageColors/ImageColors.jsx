@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ColorThief, { Palette } from 'color-thief-react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+
 import './imageColors.css';
 import { MyPalette } from '../myPalette/MyPalette';
 
@@ -23,70 +25,81 @@ export const ImageColors = () => {
 	};
 
 	return (
-		<div className="image-colors-container">
-			<div className="image-upload">
-				<div>
-					<img src={imageSrc} alt="Imagen Cargada" style={{ width: '50%' }} />
-				</div>
-				<input type="file" accept="image/*" onChange={handleImageUpload} />
+		<>
+			<div className="image-colors-container">
+				<div className="image-upload">
+					<div>
+						<img src={imageSrc} alt="Imagen Cargada" style={{ width: '50%' }} />
+					</div>
+					<input type="file" accept="image/*" onChange={handleImageUpload} />
 
-				{imageSrc && (
-					<ColorThief src={imageSrc} format="hex" crossOrigin="anonymous">
+					{imageSrc && (
+						<ColorThief src={imageSrc} format="hex" crossOrigin="anonymous">
+							{({ data, loading }) => {
+								if (loading) return <Loading />;
+
+								return (
+									<>
+										<div
+											className="predominant-color"
+											style={{
+												backgroundColor: data,
+												/* 	width: '50%',
+											height: '50px', */
+											}}
+										>
+											<CopyToClipboard text={data}>
+												<p className="predominant-code">
+													Predominant color:
+													<strong>{data}</strong>
+												</p>
+											</CopyToClipboard>
+										</div>
+									</>
+								);
+							}}
+						</ColorThief>
+					)}
+				</div>
+				<div className="palette">
+					<Palette
+						src={imageSrc}
+						crossOrigin="anonymous"
+						format="hex"
+						colorCount={6}
+					>
 						{({ data, loading }) => {
+							const [localColors, setLocalColors] = useState([]);
+
+							useEffect(() => {
+								if (!loading) {
+									setLocalColors(data);
+									setColors(data);
+								}
+							}, [data, loading]);
+
 							if (loading) return <Loading />;
 
-							return (
-								<>
-									<div
-										className="predominant-color"
-										style={{
-											backgroundColor: data,
-											/* 	width: '50%',
-											height: '50px', */
-										}}
-									>
-										<p className="predominant-code">
-											Predominant color:
-											<strong>{data}</strong>
-										</p>
-									</div>
-								</>
-							);
+							return <MyPalette colors={data} />;
 						}}
-					</ColorThief>
-				)}
-			</div>
-			<div className="palette">
-				<Palette src={imageSrc} crossOrigin="anonymous" format="hex" colorCount={6}>
-					{({ data, loading }) => {
-						const [localColors, setLocalColors] = useState([]);
+					</Palette>
+					<hr />
+					<button className="btn-try">Try this palette</button>
+				</div>
 
-						useEffect(() => {
-							if (!loading) {
-								setLocalColors(data);
-								setColors(data);
-							}
-						}, [data, loading]);
-
-						if (loading) return <Loading />;
-
-						return <MyPalette colors={data} />;
-					}}
-				</Palette>
-			</div>
-
-			<div className="code">
-				<h1>style.css</h1>
-				<div>
-					<p>:root </p>
-					{colors.map((color, index) => (
-						<p key={index}>
-							<span>--color {index}:</span>
-							{color}
-						</p>
-					))}
+				<div className="code">
+					<h1>style.css</h1>
+					<div>
+						<p>:root </p>
+						{colors.map((color, index) => (
+							<p key={index}>
+								<span>--color {index}:</span>
+								{color}
+							</p>
+						))}
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
