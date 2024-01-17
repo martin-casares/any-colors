@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import ColorThief, { Palette } from 'color-thief-react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-
+import { useColorContext } from '../../ColorContext';
 import './imageColors.css';
 import { MyPalette } from '../myPalette/MyPalette';
 
 const Loading = () => <div>Loading...</div>;
 
 export const ImageColors = () => {
-	const [colors, setColors] = useState([]);
+	const { mainColor, colors, setMainColor, setColors } = useColorContext();
+
+	const [colorsImage, setColorsImage] = useState([]);
 	const [imageSrc, setImageSrc] = useState(
 		'https://live.staticflickr.com/65535/50237066832_72c7290c5c_c.jpg'
 	);
@@ -74,7 +76,7 @@ export const ImageColors = () => {
 							useEffect(() => {
 								if (!loading) {
 									setLocalColors(data);
-									setColors(data);
+									setColorsImage(data);
 								}
 							}, [data, loading]);
 
@@ -84,14 +86,16 @@ export const ImageColors = () => {
 						}}
 					</Palette>
 					<hr />
-					<button className="btn-try">Try this palette</button>
+					<button className="btn-try" onClick={() => setColors(colorsImage)}>
+						Try this palette
+					</button>
 				</div>
 
 				<div className="code">
 					<h1>style.css</h1>
 					<div>
 						<p>:root </p>
-						{colors.map((color, index) => (
+						{colorsImage.map((color, index) => (
 							<p key={index}>
 								<span>--color {index}:</span>
 								{color}
