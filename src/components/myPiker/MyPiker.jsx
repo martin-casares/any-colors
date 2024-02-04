@@ -29,7 +29,7 @@ export const MyPiker = () => {
 
 	useEffect(() => {
 		generateColors(mainColor);
-	}, [setMainColor, setColors]);
+	}, [mainColor, setColors]);
 
 	const handleColorChange = (color) => {
 		setMainColor(color.hex);

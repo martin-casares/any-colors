@@ -1,9 +1,8 @@
 import './listUsers.css';
-
 const users = [
 	{
-		userName: 'github/pmarino2013',
-		name: 'Pablo Marino',
+		userName: 'github/azueel',
+		name: 'Alejo Calandra',
 		isFollowing: true,
 	},
 	{
@@ -35,7 +34,7 @@ export const ListUsers = ({ colors }) => {
 					<header className="followCard-body">
 						<img
 							className="followCard-avatar"
-							alt="El avatar de midudev"
+							alt="avatar"
 							src={`https://unavatar.io/${user.userName}`}
 						/>
 						<div className="followCard-info" style={{ color: colors[3] }}>
@@ -47,7 +46,10 @@ export const ListUsers = ({ colors }) => {
 					<aside>
 						<button
 							className="followCard-button"
-							style={{ background: colors[5], border: `2.5px solid ${colors[0]}` }}
+							style={{
+								background: colors[5],
+								border: `2.5px solid ${colors[0]}`,
+							}}
 						>
 							<span className="followCard-text">Follow</span>
 						</button>

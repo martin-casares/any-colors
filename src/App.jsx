@@ -1,15 +1,13 @@
-import { useState } from 'react';
 import './App.css';
-
 import { MyPiker } from './components/myPiker/MyPiker';
 import { ListComponents } from './components/listComponents/ListComponents';
 import { ImageColors } from './components/imageColors/ImageColors';
 import { Navbar } from './components/navbar/Navbar';
 import { Footer } from './components/footer/Footer';
+import { useColorContext } from './ColorContext';
 
 function App() {
-	const [mainColor, setMainColor] = useState('#535392');
-	const [colors, setColors] = useState([]);
+	const { mainColor, colors, setMainColor, setColors } = useColorContext();
 
 	return (
 		<>

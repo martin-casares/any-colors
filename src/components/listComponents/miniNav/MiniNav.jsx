@@ -6,7 +6,7 @@ import { FaTwitter } from 'react-icons/fa6';
 export const MiniNav = ({ colors }) => {
 	return (
 		<div className="mini-nav ">
-			<div className="nav-wrapper" style={{ background: colors[5] }}>
+			<div className="nav-wrapper" style={{ background: colors[2] }}>
 				<div className="nav-content">
 					<strong className="logo" style={{ color: colors[3] }}>
 						Logo
@@ -34,7 +34,7 @@ export const MiniNav = ({ colors }) => {
 				<p className="hero-title" style={{ color: colors[4] }}>
 					Hello I'm
 				</p>
-				<span style={{ color: colors[5], fontSize: '1.5rem' }}>
+				<span className="hero-subtitle" style={{ color: colors[5] }}>
 					frontend developer...
 				</span>
 				<button
@@ -45,7 +45,9 @@ export const MiniNav = ({ colors }) => {
 						color: colors[2],
 					}}
 				>
-					<span className="followCard-text">download cv</span>
+					<span className="hero-button-text" style={{ color: colors[3] }}>
+						download cv
+					</span>
 				</button>
 				<div className="hero-icons">
 					<a href="">
