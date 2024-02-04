@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;400;500;600;700&display=swap');
 
 #root {
-	max-width: 1950px;
-	/* 	margin: 0 auto; */
+	max-width: 1850px;
+	margin: 0 auto;
 	padding: 0rem;
 	text-align: center;
 }
 .app-container {
-	margin: 1rem;
+	max-width: 1250px;
+	margin: auto;
 }
 .app-container .app-title {
 	font-size: 3rem;
