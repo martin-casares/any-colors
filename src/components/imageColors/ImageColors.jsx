@@ -8,7 +8,7 @@ import { MyPalette } from '../myPalette/MyPalette';
 const Loading = () => <div>Loading...</div>;
 
 export const ImageColors = () => {
-	const { mainColor, colors, setMainColor, setColors } = useColorContext();
+	const { setColors } = useColorContext();
 
 	const [colorsImage, setColorsImage] = useState([]);
 	const [imageSrc, setImageSrc] = useState(

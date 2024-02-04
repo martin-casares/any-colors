@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
 .nav-wrapper {
 	background: rgba(0, 0, 0, 0.1);
-	padding: 0.2rem 2.5rem;
+	padding: 1.2rem 2.5rem;
 	top: 0;
 }
 .nav-content {
@@ -40,15 +38,21 @@
 	align-items: center;
 	justify-content: center;
 }
-
+.hero-title,
+.hero-subtitle {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
 .hero-button {
 	cursor: pointer;
 	margin-top: 20px;
-	border-radius: 999px;
+	border-radius: 10px;
 	padding: 4px 8px;
 	font-weight: bold;
 }
-
+.hero-button-text {
+	font-size: 0.8;
+}
 .hero-button:hover {
 	opacity: 0.8px;
 	background: transparent;
